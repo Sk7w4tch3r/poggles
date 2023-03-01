@@ -34,7 +34,7 @@ public:
   shader(std::filesystem::path path, GLenum type);
 
   // Public interface
-  [[nodiscard]] auto get_path() const -> std::string { return m_path; }
+  [[nodiscard]] auto get_path() const -> std::string { return m_path.string(); }
   [[nodiscard]] auto get_type() const -> GLenum { return m_type; }
   explicit operator shader_id() const
   {
